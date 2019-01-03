@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="MTauTauContext-Web.config Connection String" description="MTauTauContext データベースに接続するためにアプリケーションによって web.config で使用される接続文字列。" defaultValue="Data Source=(LocalDb)\ProjectsV13; AttachDbFilename=|DataDirectory|\Main_TauTau.mdf; Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\user\\source\\repos\\TauTau\\TauTau\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MTauTauContext']/@connectionString" />
+  </parameter>
+  <parameter name="MTauTauContext_DatabasePublish-Web.config Connection String" description="MTauTauContext_DatabasePublish データベースに接続するためにアプリケーションによって web.config で使用される接続文字列。" defaultValue="MTauTauContext_DatabasePublish.ConnetionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\user\\source\\repos\\TauTau\\TauTau\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MTauTauContext_DatabasePublish']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,21 @@
+﻿@model TauTau.Models.MTauTau
+<body>
+    @{
+        ViewBag.Title = "Create";
+    }
+    @{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <h2>投稿タウタウ</h2>
+
+    @using (Html.BeginForm())
+    {
+
+        @Html.TextAreaFor(
+            m => Model.Main_View_TimeLine,  // プロパティ
+            new { @class = "Respons_Text" }      // その他の属性
+  )
+        <input type="submit" name="Create" value="投稿" , id="Respons_Button" />
+    }
+</body>

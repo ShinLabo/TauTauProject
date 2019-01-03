@@ -1,0 +1,89 @@
+﻿@model IEnumerable<TauTau.Models.MTauTau>
+@{
+    ViewBag.Title = "タウタウ♪";
+}
+
+<body>
+
+    <div id="wrapper_body">
+        <div id="Block_Style">
+            <h2>メインタウタウ</h2>
+            <div id="Wrapper_leftbody">
+                @foreach (var item in Model)
+                {
+                    <div id="white_space">
+                        <div id="Cycle_Box">
+                            @Html.Raw(Html.Encode(item.Main_View_TimeLine).Replace("\n", "<br />"))
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <div id="Wrapper_rightbody">
+            <h2 id="Stock_View_Font">ストックタウタウ</h2>
+            <div id="Cycle_StockBox">
+                @using (Html.BeginForm(
+                    "Post_MusicPage",
+                    "MTauTau",
+                    null,
+                    FormMethod.Post
+                    ))
+                {
+                <form v-on:submit.prevent="onSubmit">
+                    <input type="text" name="Music_Stock1" id="Music_Stock1" onkeypress="return NonEneter();">
+                    <input type="text" name="Music_Stock2" id="Music_Stock2" onkeypress="return NonEneter();">
+                    <input type="text" name="Music_Stock3" id="Music_Stock3" onkeypress="return NonEneter();">
+                    <input type="text" name="Music_Stock4" id="Music_Stock4" onkeypress="return NonEneter();">
+                    <input type="text" name="Music_Stock5" id="Music_Stock5" onkeypress="return NonEneter();">
+                    <input type="text" name="Music_Stock6" id="Music_Stock6" onkeypress="return NonEneter();">
+                    <input type="text" name="Music_Stock7" id="Music_Stock7" onkeypress="return NonEneter();">
+                    <input type="text" name="Music_Stock8" id="Music_Stock8" onkeypress="return NonEneter();">
+@*
+                    @Html.TextBox(
+                        "Music_Stock1",
+                        "",
+                        new { maxlength = 20 }
+                    )
+                    @Html.TextBox(
+                        "Music_Stock2",
+                        "",
+                        new { maxlength = 20 }
+                    )
+                    @Html.TextBox(
+                        "Music_Stock3",
+                        "",
+                        new { maxlength = 20 }
+                    )
+                    @Html.TextBox(
+                        "Music_Stock4",
+                        "",
+                        new { maxlength = 20 }
+                    )
+                    @Html.TextBox(
+                        "Music_Stock5",
+                        "",
+                        new { maxlength = 20 }
+                    )
+                    @Html.TextBox(
+                        "Music_Stock6",
+                        "",
+                        new { maxlength = 20 }
+                    )
+                    @Html.TextBox(
+                        "Music_Stock7",
+                        "",
+                        new { maxlength = 20 }
+                    )
+                    @Html.TextBox(
+                        "Music_Stock8",
+                        "",
+                        new { maxlength = 20 }
+                    )
+*@
+                    <button type="submit">歌ってみる！</button>
+                </form>
+                }
+            </div>
+        </div>
+    </div>
+</body>

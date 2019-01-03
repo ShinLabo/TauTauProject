@@ -1,0 +1,71 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "歌詞タウタウ";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Content/Site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <title>歌詞タウタウ</title>
+</head>
+<body>
+    <div class="MusicHeader">
+        <div class="MusicContainer">
+            <div class="Navbar_Header">
+                    @Html.ActionLink("TauTau", "Index", "MTauTau", new { area = "" }, new { @class = "HeadActionLink" })
+            </div>
+            <div class="Navbar_Header_Mini">
+                    @Html.ActionLink("投稿", "Create", "MTauTau", new { @class = "HeadActionLink_Mini" })
+            </div>
+        </div>
+    </div>
+    <div id="MusicWrapper_Body">
+        <h2 id="Music_h2">歌詞タウタウ</h2>
+        <div id="Music_Body">
+            <div id="MusicPage_RightBody">
+                <div id="Music_PostData">
+                    <p id="OnpData">@Html.ViewData["OnpData1"]</p>
+                    <br />
+                    <p id="PostData">@Html.ViewData["PostData1"]</p>
+                    <br />
+                    <p id="OnpData">@Html.ViewData["OnpData2"]</p>
+                    <br />
+                    <p id="PostData">@Html.ViewData["PostData2"]</p>
+                    <br />
+                    <p id="OnpData">@Html.ViewData["OnpData3"]</p>
+                    <br />
+                    <p id="PostData">@Html.ViewData["PostData3"]</p>
+                    <br />
+                    <p id="OnpData">@Html.ViewData["OnpData4"]</p>
+                    <br />
+                    <p id="PostData">@Html.ViewData["PostData4"]</p>
+                    <br />
+                    <p id="OnpData">@Html.ViewData["OnpData5"]</p>
+                    <br />
+                    <p id="PostData">@Html.ViewData["PostData5"]</p>
+                    <br />
+                    <p id="OnpData">@Html.ViewData["OnpData6"]</p>
+                    <br />
+                    <p id="PostData">@Html.ViewData["PostData6"]</p>
+                    <br />
+                    <p id="OnpData">@Html.ViewData["OnpData7"]</p>
+                    <br />
+                    <p id="PostData">@Html.ViewData["PostData7"]</p>
+                    <br />
+                    <p id="OnpData">@Html.ViewData["OnpData8"]</p>
+                    <br />
+                    <p id="PostData">@Html.ViewData["PostData8"]</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; @DateTime.Now.Year - タウタウ アプリケーション</p>
+        </footer>
+    </div>
+</body>
+</html>
